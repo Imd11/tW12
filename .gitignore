@@ -1,0 +1,10 @@
+*.log
+.env
+.env.*
+.imd/collaboration-state.json
+.imd-local/
+node_modules/
+models/
+cache/
+dist/
+tmp/
