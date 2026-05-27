@@ -1,0 +1,9 @@
+store_id,store_name,city,province,region_id,manager,open_date,store_tier
+S001,Shanghai Flagship,Shanghai,Shanghai,R01,Lin Chen,2019-03-01,A
+S002,Suzhou Center,Suzhou,Jiangsu,R01,Wei Zhao,2020-06-12,B
+S003,Beijing North,Beijing,Beijing,R02,Ming Hu,2018-09-18,A
+S004,Tianjin Port,Tianjin,Tianjin,R02,Yuan Li,2021-04-08,B
+S005,Shenzhen Tech Mall,Shenzhen,Guangdong,R03,Kai Wang,2019-11-20,A
+S006,Guangzhou Riverside,Guangzhou,Guangdong,R03,Nan Zhou,2020-01-15,A
+S007,Chengdu West,Chengdu,Sichuan,R04,Jie Tang,2022-02-28,B
+S008,Wuhan Optics Valley,Wuhan,Hubei,R05,Yan Sun,2021-10-09,B

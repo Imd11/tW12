@@ -1,3 +1,12 @@
 {
-  "projects": []
+  "projects": [
+    {
+      "id": "project-1778897240992-su4w0p",
+      "name": "merge-relations-cleaning-lab"
+    },
+    {
+      "id": "project-1779861144876-2lowlf",
+      "name": "echarts_examples_by_category"
+    }
+  ]
 }

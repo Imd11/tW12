@@ -1,0 +1,18 @@
+return_id,order_id,return_date,return_reason,refund_amount,resolved_flag
+RT0001,O00043,2026-02-03,Delayed delivery,3182.91,true
+RT0002,O00065,2026-02-28,Delayed delivery,652.97,true
+RT0003,O00067,2026-02-20,Damaged item,7165.21,true
+RT0004,O00090,2026-03-13,Customer changed mind,3760.76,true
+RT0005,O00102,2026-03-29,Wrong SKU,5206.21,true
+RT0006,O00116,2026-04-09,Delayed delivery,488.42,true
+RT0007,O00118,2026-04-10,Damaged item,825.18,true
+RT0008,O00121,2026-04-06,Wrong SKU,4453.91,true
+RT0009,O00134,2026-04-21,Delayed delivery,1560.66,true
+RT0010,O00137,2026-04-08,Damaged item,4860.42,true
+RT0011,O00148,2026-04-11,Delayed delivery,8785.11,false
+RT0012,O00151,2026-04-22,Damaged item,2590.60,false
+RT0013,O00165,2026-04-27,Wrong SKU,3010.07,true
+RT0014,O00187,2026-05-29,Delayed delivery,11981.28,true
+RT0015,O00194,2026-05-28,Wrong SKU,1115.36,false
+RT0016,O00199,2026-05-23,Damaged item,186.04,true
+RT0017,O00217,2026-06-03,Customer changed mind,2478.18,true

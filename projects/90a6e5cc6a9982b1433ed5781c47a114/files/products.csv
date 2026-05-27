@@ -1,0 +1,7 @@
+sku,product_name,product_category,unit_cost,list_price,launch_year
+P1001,Insight Basic,Software,38.00,99.00,2022
+P1002,Insight Pro,Software,92.00,229.00,2023
+P2001,Sensor Lite,Hardware,126.00,259.00,2021
+P2002,Sensor Max,Hardware,268.00,499.00,2022
+P3001,Data Care,Service,55.00,149.00,2023
+P3002,Enterprise Onboarding,Service,380.00,899.00,2024

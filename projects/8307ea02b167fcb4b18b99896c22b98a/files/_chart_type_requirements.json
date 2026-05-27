@@ -1,0 +1,1314 @@
+{
+  "bar": {
+    "name_zh": "柱状图",
+    "kind": "series",
+    "imd_priority": "core",
+    "min_fields": "2",
+    "data_shape": "table_rows",
+    "required": [
+      {
+        "id": "category",
+        "label": "分类/X轴",
+        "required": true,
+        "types": [
+          "text",
+          "category",
+          "date"
+        ],
+        "description": "每个柱子的类目、时间或分组"
+      },
+      {
+        "id": "value",
+        "label": "数值/Y轴",
+        "required": true,
+        "types": [
+          "number"
+        ],
+        "description": "柱子高度或长度"
+      }
+    ],
+    "optional": [
+      {
+        "id": "series",
+        "label": "分组/系列",
+        "required": false,
+        "types": [
+          "text",
+          "category"
+        ],
+        "description": "生成多系列或堆叠柱状图"
+      },
+      {
+        "id": "stack",
+        "label": "堆叠组",
+        "required": false,
+        "types": [
+          "text",
+          "category"
+        ],
+        "description": "把多个系列堆叠显示"
+      }
+    ],
+    "strategy": "优先选择低基数文本/日期字段做 category，选择第一个数值字段做 value。"
+  },
+  "line": {
+    "name_zh": "折线图",
+    "kind": "series",
+    "imd_priority": "core",
+    "min_fields": "2",
+    "data_shape": "table_rows",
+    "required": [
+      {
+        "id": "x",
+        "label": "X轴/时间或分类",
+        "required": true,
+        "types": [
+          "date",
+          "number",
+          "text",
+          "category"
+        ],
+        "description": "趋势横轴，优先日期或有序字段"
+      },
+      {
+        "id": "y",
+        "label": "数值/Y轴",
+        "required": true,
+        "types": [
+          "number"
+        ],
+        "description": "趋势数值"
+      }
+    ],
+    "optional": [
+      {
+        "id": "series",
+        "label": "分组/系列",
+        "required": false,
+        "types": [
+          "text",
+          "category"
+        ],
+        "description": "生成多条折线"
+      }
+    ],
+    "strategy": "优先日期字段做 x；没有日期时用分类字段；数值字段做 y。"
+  },
+  "pie": {
+    "name_zh": "饼图/环图",
+    "kind": "series",
+    "imd_priority": "core",
+    "min_fields": "2",
+    "data_shape": "category_value",
+    "required": [
+      {
+        "id": "name",
+        "label": "分类名称",
+        "required": true,
+        "types": [
+          "text",
+          "category"
+        ],
+        "description": "扇区名称"
+      },
+      {
+        "id": "value",
+        "label": "数值",
+        "required": true,
+        "types": [
+          "number"
+        ],
+        "description": "扇区大小"
+      }
+    ],
+    "optional": [
+      {
+        "id": "group",
+        "label": "聚合分组",
+        "required": false,
+        "types": [
+          "text",
+          "category"
+        ],
+        "description": "同名分类聚合"
+      }
+    ],
+    "strategy": "选择低基数分类字段做 name，数值字段做 value；默认 Top N。"
+  },
+  "scatter": {
+    "name_zh": "散点图",
+    "kind": "series",
+    "imd_priority": "core",
+    "min_fields": "2",
+    "data_shape": "points",
+    "required": [
+      {
+        "id": "x",
+        "label": "X数值",
+        "required": true,
+        "types": [
+          "number"
+        ],
+        "description": "点的 X 坐标"
+      },
+      {
+        "id": "y",
+        "label": "Y数值",
+        "required": true,
+        "types": [
+          "number"
+        ],
+        "description": "点的 Y 坐标"
+      }
+    ],
+    "optional": [
+      {
+        "id": "size",
+        "label": "气泡大小",
+        "required": false,
+        "types": [
+          "number"
+        ],
+        "description": "控制点大小"
+      },
+      {
+        "id": "category",
+        "label": "颜色分类",
+        "required": false,
+        "types": [
+          "text",
+          "category"
+        ],
+        "description": "按类别着色"
+      }
+    ],
+    "strategy": "至少需要两个数值字段；第三个数值字段可做 size。"
+  },
+  "effectScatter": {
+    "name_zh": "涟漪散点图",
+    "kind": "series",
+    "imd_priority": "advanced",
+    "min_fields": "2",
+    "data_shape": "points_or_geo_points",
+    "required": [
+      {
+        "id": "x",
+        "label": "X/经度",
+        "required": true,
+        "types": [
+          "number"
+        ],
+        "description": "X 坐标或经度"
+      },
+      {
+        "id": "y",
+        "label": "Y/纬度",
+        "required": true,
+        "types": [
+          "number"
+        ],
+        "description": "Y 坐标或纬度"
+      }
+    ],
+    "optional": [
+      {
+        "id": "value",
+        "label": "数值",
+        "required": false,
+        "types": [
+          "number"
+        ],
+        "description": "涟漪大小或强度"
+      },
+      {
+        "id": "name",
+        "label": "名称",
+        "required": false,
+        "types": [
+          "text",
+          "category"
+        ],
+        "description": "点名称"
+      }
+    ],
+    "strategy": "普通表用两个数值字段；地理数据用经纬度字段。"
+  },
+  "radar": {
+    "name_zh": "雷达图",
+    "kind": "series",
+    "imd_priority": "advanced",
+    "min_fields": "3",
+    "data_shape": "multi_metric_vectors",
+    "required": [
+      {
+        "id": "dimension_values",
+        "label": "多个指标值",
+        "required": true,
+        "types": [
+          "number[]"
+        ],
+        "description": "每个对象在多个指标上的数值"
+      }
+    ],
+    "optional": [
+      {
+        "id": "name",
+        "label": "对象名称",
+        "required": false,
+        "types": [
+          "text",
+          "category"
+        ],
+        "description": "每条雷达线名称"
+      }
+    ],
+    "strategy": "选择 3 个以上数值字段作为指标；分类字段作为对象名。"
+  },
+  "tree": {
+    "name_zh": "树图",
+    "kind": "series",
+    "imd_priority": "advanced",
+    "min_fields": "2",
+    "data_shape": "hierarchy",
+    "required": [
+      {
+        "id": "id_or_name",
+        "label": "节点名称",
+        "required": true,
+        "types": [
+          "text",
+          "category"
+        ],
+        "description": "节点标识或名称"
+      },
+      {
+        "id": "parent_or_children",
+        "label": "父子关系",
+        "required": true,
+        "types": [
+          "text",
+          "category",
+          "hierarchy"
+        ],
+        "description": "parent_id 或 children 结构"
+      }
+    ],
+    "optional": [
+      {
+        "id": "value",
+        "label": "节点值",
+        "required": false,
+        "types": [
+          "number"
+        ],
+        "description": "节点大小或权重"
+      }
+    ],
+    "strategy": "优先识别 id/parent_id；否则需要预处理成 children。"
+  },
+  "treemap": {
+    "name_zh": "矩形树图",
+    "kind": "series",
+    "imd_priority": "advanced",
+    "min_fields": "2",
+    "data_shape": "hierarchy_value",
+    "required": [
+      {
+        "id": "name",
+        "label": "节点名称",
+        "required": true,
+        "types": [
+          "text",
+          "category"
+        ],
+        "description": "节点名称"
+      },
+      {
+        "id": "value",
+        "label": "节点数值",
+        "required": true,
+        "types": [
+          "number"
+        ],
+        "description": "面积大小"
+      }
+    ],
+    "optional": [
+      {
+        "id": "parent",
+        "label": "父节点",
+        "required": false,
+        "types": [
+          "text",
+          "category"
+        ],
+        "description": "层级关系"
+      }
+    ],
+    "strategy": "分类层级 + 数值；需要构造成 children。"
+  },
+  "sunburst": {
+    "name_zh": "旭日图",
+    "kind": "series",
+    "imd_priority": "advanced",
+    "min_fields": "2",
+    "data_shape": "hierarchy_value",
+    "required": [
+      {
+        "id": "name",
+        "label": "节点名称",
+        "required": true,
+        "types": [
+          "text",
+          "category"
+        ],
+        "description": "节点名称"
+      },
+      {
+        "id": "value",
+        "label": "节点数值",
+        "required": true,
+        "types": [
+          "number"
+        ],
+        "description": "扇区大小"
+      }
+    ],
+    "optional": [
+      {
+        "id": "parent",
+        "label": "父节点",
+        "required": false,
+        "types": [
+          "text",
+          "category"
+        ],
+        "description": "层级关系"
+      }
+    ],
+    "strategy": "分类层级 + 数值；需要构造成 children。"
+  },
+  "boxplot": {
+    "name_zh": "箱线图",
+    "kind": "series",
+    "imd_priority": "advanced",
+    "min_fields": "2",
+    "data_shape": "distribution",
+    "required": [
+      {
+        "id": "category",
+        "label": "分类",
+        "required": true,
+        "types": [
+          "text",
+          "category"
+        ],
+        "description": "分组名称"
+      },
+      {
+        "id": "samples",
+        "label": "样本值",
+        "required": true,
+        "types": [
+          "number",
+          "number[]"
+        ],
+        "description": "每组的数值样本，或 min/q1/median/q3/max"
+      }
+    ],
+    "optional": [
+      {
+        "id": "outlier",
+        "label": "异常值",
+        "required": false,
+        "types": [
+          "number"
+        ],
+        "description": "异常点"
+      }
+    ],
+    "strategy": "分类字段分组，数值字段作为样本；或直接使用五数摘要字段。"
+  },
+  "candlestick": {
+    "name_zh": "K线图",
+    "kind": "series",
+    "imd_priority": "advanced",
+    "min_fields": "5",
+    "data_shape": "ohlc",
+    "required": [
+      {
+        "id": "date",
+        "label": "日期/周期",
+        "required": true,
+        "types": [
+          "date",
+          "text",
+          "category"
+        ],
+        "description": "交易日期或周期"
+      },
+      {
+        "id": "open",
+        "label": "开盘",
+        "required": true,
+        "types": [
+          "number"
+        ],
+        "description": "开盘价"
+      },
+      {
+        "id": "close",
+        "label": "收盘",
+        "required": true,
+        "types": [
+          "number"
+        ],
+        "description": "收盘价"
+      },
+      {
+        "id": "low",
+        "label": "最低",
+        "required": true,
+        "types": [
+          "number"
+        ],
+        "description": "最低价"
+      },
+      {
+        "id": "high",
+        "label": "最高",
+        "required": true,
+        "types": [
+          "number"
+        ],
+        "description": "最高价"
+      }
+    ],
+    "optional": [
+      {
+        "id": "volume",
+        "label": "成交量",
+        "required": false,
+        "types": [
+          "number"
+        ],
+        "description": "成交量，可配合柱状图"
+      }
+    ],
+    "strategy": "按字段名识别 open/close/low/high/date。"
+  },
+  "heatmap": {
+    "name_zh": "热力图",
+    "kind": "series",
+    "imd_priority": "core",
+    "min_fields": "3",
+    "data_shape": "matrix_triples",
+    "required": [
+      {
+        "id": "x",
+        "label": "X维度",
+        "required": true,
+        "types": [
+          "text",
+          "category",
+          "date",
+          "number"
+        ],
+        "description": "横向维度"
+      },
+      {
+        "id": "y",
+        "label": "Y维度",
+        "required": true,
+        "types": [
+          "text",
+          "category",
+          "date",
+          "number"
+        ],
+        "description": "纵向维度"
+      },
+      {
+        "id": "value",
+        "label": "热度值",
+        "required": true,
+        "types": [
+          "number"
+        ],
+        "description": "颜色强度"
+      }
+    ],
+    "optional": [
+      {
+        "id": "series",
+        "label": "分面",
+        "required": false,
+        "types": [
+          "text",
+          "category"
+        ],
+        "description": "多个热力图分组"
+      }
+    ],
+    "strategy": "两个分类/日期字段 + 一个数值字段。"
+  },
+  "map": {
+    "name_zh": "地图",
+    "kind": "series",
+    "imd_priority": "advanced",
+    "min_fields": "2",
+    "data_shape": "geo_region_value",
+    "required": [
+      {
+        "id": "region",
+        "label": "地区名称/编码",
+        "required": true,
+        "types": [
+          "text",
+          "category"
+        ],
+        "description": "地区名、国家、省、市或编码"
+      },
+      {
+        "id": "value",
+        "label": "数值",
+        "required": true,
+        "types": [
+          "number"
+        ],
+        "description": "地区数值"
+      }
+    ],
+    "optional": [
+      {
+        "id": "longitude",
+        "label": "经度",
+        "required": false,
+        "types": [
+          "number"
+        ],
+        "description": "点地图经度"
+      },
+      {
+        "id": "latitude",
+        "label": "纬度",
+        "required": false,
+        "types": [
+          "number"
+        ],
+        "description": "点地图纬度"
+      }
+    ],
+    "strategy": "需要地图资产/GeoJSON；普通表优先 region + value。"
+  },
+  "parallel": {
+    "name_zh": "平行坐标",
+    "kind": "series",
+    "imd_priority": "advanced",
+    "min_fields": "3",
+    "data_shape": "multi_dimension_rows",
+    "required": [
+      {
+        "id": "dimensions",
+        "label": "多个维度",
+        "required": true,
+        "types": [
+          "number[]",
+          "mixed[]"
+        ],
+        "description": "每行多个维度值"
+      }
+    ],
+    "optional": [
+      {
+        "id": "category",
+        "label": "分类",
+        "required": false,
+        "types": [
+          "text",
+          "category"
+        ],
+        "description": "线条分组"
+      }
+    ],
+    "strategy": "选择 3 个以上数值/有序字段作为维度。"
+  },
+  "lines": {
+    "name_zh": "线图/迁徙线",
+    "kind": "series",
+    "imd_priority": "advanced",
+    "min_fields": "2",
+    "data_shape": "origin_target_coordinates",
+    "required": [
+      {
+        "id": "source",
+        "label": "起点",
+        "required": true,
+        "types": [
+          "coordinate",
+          "text"
+        ],
+        "description": "起点坐标或地点"
+      },
+      {
+        "id": "target",
+        "label": "终点",
+        "required": true,
+        "types": [
+          "coordinate",
+          "text"
+        ],
+        "description": "终点坐标或地点"
+      }
+    ],
+    "optional": [
+      {
+        "id": "value",
+        "label": "权重",
+        "required": false,
+        "types": [
+          "number"
+        ],
+        "description": "线条强度"
+      },
+      {
+        "id": "source_lng",
+        "label": "起点经度",
+        "required": false,
+        "types": [
+          "number"
+        ],
+        "description": "起点经度"
+      },
+      {
+        "id": "source_lat",
+        "label": "起点纬度",
+        "required": false,
+        "types": [
+          "number"
+        ],
+        "description": "起点纬度"
+      },
+      {
+        "id": "target_lng",
+        "label": "终点经度",
+        "required": false,
+        "types": [
+          "number"
+        ],
+        "description": "终点经度"
+      },
+      {
+        "id": "target_lat",
+        "label": "终点纬度",
+        "required": false,
+        "types": [
+          "number"
+        ],
+        "description": "终点纬度"
+      }
+    ],
+    "strategy": "优先识别起终点坐标；否则需要地点到坐标映射。"
+  },
+  "graph": {
+    "name_zh": "关系图",
+    "kind": "series",
+    "imd_priority": "advanced",
+    "min_fields": "2",
+    "data_shape": "nodes_links",
+    "required": [
+      {
+        "id": "source",
+        "label": "来源节点",
+        "required": true,
+        "types": [
+          "text",
+          "category"
+        ],
+        "description": "边的来源"
+      },
+      {
+        "id": "target",
+        "label": "目标节点",
+        "required": true,
+        "types": [
+          "text",
+          "category"
+        ],
+        "description": "边的目标"
+      }
+    ],
+    "optional": [
+      {
+        "id": "value",
+        "label": "权重",
+        "required": false,
+        "types": [
+          "number"
+        ],
+        "description": "边权重"
+      },
+      {
+        "id": "category",
+        "label": "节点分类",
+        "required": false,
+        "types": [
+          "text",
+          "category"
+        ],
+        "description": "节点分组"
+      }
+    ],
+    "strategy": "source/target 生成 links，并从两列去重生成 nodes。"
+  },
+  "sankey": {
+    "name_zh": "桑基图",
+    "kind": "series",
+    "imd_priority": "core",
+    "min_fields": "2",
+    "data_shape": "flows",
+    "required": [
+      {
+        "id": "source",
+        "label": "来源",
+        "required": true,
+        "types": [
+          "text",
+          "category"
+        ],
+        "description": "流向来源"
+      },
+      {
+        "id": "target",
+        "label": "目标",
+        "required": true,
+        "types": [
+          "text",
+          "category"
+        ],
+        "description": "流向目标"
+      }
+    ],
+    "optional": [
+      {
+        "id": "value",
+        "label": "流量/权重",
+        "required": false,
+        "types": [
+          "number"
+        ],
+        "description": "流量大小；没有则按 count 聚合"
+      }
+    ],
+    "strategy": "source + target 必填；value 没有时按记录数计数。"
+  },
+  "funnel": {
+    "name_zh": "漏斗图",
+    "kind": "series",
+    "imd_priority": "core",
+    "min_fields": "2",
+    "data_shape": "stage_value",
+    "required": [
+      {
+        "id": "stage",
+        "label": "阶段名称",
+        "required": true,
+        "types": [
+          "text",
+          "category"
+        ],
+        "description": "漏斗阶段"
+      },
+      {
+        "id": "value",
+        "label": "数值",
+        "required": true,
+        "types": [
+          "number"
+        ],
+        "description": "每阶段数值"
+      }
+    ],
+    "optional": [
+      {
+        "id": "order",
+        "label": "阶段顺序",
+        "required": false,
+        "types": [
+          "number",
+          "date"
+        ],
+        "description": "排序字段"
+      }
+    ],
+    "strategy": "分类阶段 + 数值；按 value 或 order 排序。"
+  },
+  "gauge": {
+    "name_zh": "仪表盘",
+    "kind": "series",
+    "imd_priority": "core",
+    "min_fields": "1",
+    "data_shape": "single_kpi",
+    "required": [
+      {
+        "id": "value",
+        "label": "指标值",
+        "required": true,
+        "types": [
+          "number"
+        ],
+        "description": "单个 KPI 数值"
+      }
+    ],
+    "optional": [
+      {
+        "id": "name",
+        "label": "指标名称",
+        "required": false,
+        "types": [
+          "text"
+        ],
+        "description": "显示名称"
+      },
+      {
+        "id": "min",
+        "label": "最小值",
+        "required": false,
+        "types": [
+          "number"
+        ],
+        "description": "仪表下限"
+      },
+      {
+        "id": "max",
+        "label": "最大值",
+        "required": false,
+        "types": [
+          "number"
+        ],
+        "description": "仪表上限"
+      }
+    ],
+    "strategy": "选择一个数值字段，默认求和/均值/最后一条。"
+  },
+  "pictorialBar": {
+    "name_zh": "象形柱状图",
+    "kind": "series",
+    "imd_priority": "advanced",
+    "min_fields": "2",
+    "data_shape": "category_value_symbol",
+    "required": [
+      {
+        "id": "category",
+        "label": "分类",
+        "required": true,
+        "types": [
+          "text",
+          "category"
+        ],
+        "description": "分类名称"
+      },
+      {
+        "id": "value",
+        "label": "数值",
+        "required": true,
+        "types": [
+          "number"
+        ],
+        "description": "数值"
+      }
+    ],
+    "optional": [
+      {
+        "id": "symbol",
+        "label": "图形符号",
+        "required": false,
+        "types": [
+          "text",
+          "category"
+        ],
+        "description": "图形或图标映射"
+      }
+    ],
+    "strategy": "分类 + 数值，符号使用模板默认。"
+  },
+  "themeRiver": {
+    "name_zh": "主题河流图",
+    "kind": "series",
+    "imd_priority": "advanced",
+    "min_fields": "3",
+    "data_shape": "time_value_category",
+    "required": [
+      {
+        "id": "date",
+        "label": "时间",
+        "required": true,
+        "types": [
+          "date",
+          "text"
+        ],
+        "description": "时间轴"
+      },
+      {
+        "id": "value",
+        "label": "数值",
+        "required": true,
+        "types": [
+          "number"
+        ],
+        "description": "流量值"
+      },
+      {
+        "id": "category",
+        "label": "主题/分类",
+        "required": true,
+        "types": [
+          "text",
+          "category"
+        ],
+        "description": "河流分组"
+      }
+    ],
+    "optional": [],
+    "strategy": "日期 + 数值 + 分类。"
+  },
+  "custom": {
+    "name_zh": "自定义图",
+    "kind": "series",
+    "imd_priority": "experimental",
+    "min_fields": "varies",
+    "data_shape": "custom_render_item",
+    "required": [
+      {
+        "id": "dimensions",
+        "label": "自定义维度",
+        "required": true,
+        "types": [
+          "mixed[]"
+        ],
+        "description": "由 renderItem/encode 决定"
+      }
+    ],
+    "optional": [],
+    "strategy": "不做自动推荐，除非模板单独声明 role schema。"
+  },
+  "chord": {
+    "name_zh": "和弦图",
+    "kind": "series",
+    "imd_priority": "advanced",
+    "min_fields": "2",
+    "data_shape": "relationship_matrix_or_edges",
+    "required": [
+      {
+        "id": "source",
+        "label": "来源",
+        "required": true,
+        "types": [
+          "text",
+          "category"
+        ],
+        "description": "关系来源"
+      },
+      {
+        "id": "target",
+        "label": "目标",
+        "required": true,
+        "types": [
+          "text",
+          "category"
+        ],
+        "description": "关系目标"
+      }
+    ],
+    "optional": [
+      {
+        "id": "value",
+        "label": "权重",
+        "required": false,
+        "types": [
+          "number"
+        ],
+        "description": "关系强度"
+      }
+    ],
+    "strategy": "source/target/value 或矩阵数据。"
+  },
+  "calendar": {
+    "name_zh": "日历坐标组件",
+    "kind": "component",
+    "imd_priority": "advanced",
+    "min_fields": "2",
+    "data_shape": "date_value",
+    "required": [
+      {
+        "id": "date",
+        "label": "日期",
+        "required": true,
+        "types": [
+          "date",
+          "text"
+        ],
+        "description": "日期"
+      },
+      {
+        "id": "value",
+        "label": "数值",
+        "required": true,
+        "types": [
+          "number"
+        ],
+        "description": "数值"
+      }
+    ],
+    "optional": [],
+    "strategy": "通常配合 heatmap/scatter 使用。"
+  },
+  "matrix": {
+    "name_zh": "矩阵坐标组件",
+    "kind": "component",
+    "imd_priority": "experimental",
+    "min_fields": "3",
+    "data_shape": "matrix_cell_value",
+    "required": [
+      {
+        "id": "row",
+        "label": "行维度",
+        "required": true,
+        "types": [
+          "text",
+          "category"
+        ],
+        "description": "矩阵行"
+      },
+      {
+        "id": "column",
+        "label": "列维度",
+        "required": true,
+        "types": [
+          "text",
+          "category"
+        ],
+        "description": "矩阵列"
+      },
+      {
+        "id": "value",
+        "label": "数值",
+        "required": true,
+        "types": [
+          "number"
+        ],
+        "description": "单元格值"
+      }
+    ],
+    "optional": [],
+    "strategy": "通常配合 heatmap/line/bar 小图使用。"
+  },
+  "dataset": {
+    "name_zh": "Dataset 示例",
+    "kind": "component",
+    "imd_priority": "internal",
+    "min_fields": "varies",
+    "data_shape": "dataset_source",
+    "required": [
+      {
+        "id": "dimensions",
+        "label": "数据维度",
+        "required": true,
+        "types": [
+          "mixed[]"
+        ],
+        "description": "dataset.source 的列"
+      }
+    ],
+    "optional": [
+      {
+        "id": "encode",
+        "label": "视觉映射",
+        "required": false,
+        "types": [
+          "mapping"
+        ],
+        "description": "字段到 x/y/value/tooltip 的映射"
+      }
+    ],
+    "strategy": "作为数据组织方式，不作为独立模板类型。"
+  },
+  "dataZoom": {
+    "name_zh": "缩放组件",
+    "kind": "component",
+    "imd_priority": "internal",
+    "min_fields": "0",
+    "data_shape": "interaction_component",
+    "required": [],
+    "optional": [
+      {
+        "id": "x",
+        "label": "X轴",
+        "required": false,
+        "types": [
+          "axis"
+        ],
+        "description": "缩放目标轴"
+      },
+      {
+        "id": "y",
+        "label": "Y轴",
+        "required": false,
+        "types": [
+          "axis"
+        ],
+        "description": "缩放目标轴"
+      }
+    ],
+    "strategy": "作为样式/交互开关，不作为独立模板类型。"
+  },
+  "graphic": {
+    "name_zh": "图形组件",
+    "kind": "component",
+    "imd_priority": "internal",
+    "min_fields": "0",
+    "data_shape": "annotation_component",
+    "required": [],
+    "optional": [],
+    "strategy": "作为装饰或注释，不作为独立模板类型。"
+  },
+  "rich": {
+    "name_zh": "富文本标签",
+    "kind": "component",
+    "imd_priority": "internal",
+    "min_fields": "0",
+    "data_shape": "label_style",
+    "required": [],
+    "optional": [],
+    "strategy": "作为标签样式能力。"
+  },
+  "transform": {
+    "name_zh": "数据转换",
+    "kind": "component",
+    "imd_priority": "internal",
+    "min_fields": "varies",
+    "data_shape": "data_transform",
+    "required": [
+      {
+        "id": "source",
+        "label": "输入数据",
+        "required": true,
+        "types": [
+          "table"
+        ],
+        "description": "待转换数据"
+      }
+    ],
+    "optional": [
+      {
+        "id": "sort",
+        "label": "排序字段",
+        "required": false,
+        "types": [
+          "number",
+          "text",
+          "date"
+        ],
+        "description": "排序"
+      },
+      {
+        "id": "filter",
+        "label": "过滤字段",
+        "required": false,
+        "types": [
+          "mixed"
+        ],
+        "description": "过滤"
+      }
+    ],
+    "strategy": "作为数据预处理能力。"
+  },
+  "visualMap": {
+    "name_zh": "视觉映射组件",
+    "kind": "component",
+    "imd_priority": "internal",
+    "min_fields": "1",
+    "data_shape": "visual_encoding",
+    "required": [
+      {
+        "id": "value",
+        "label": "数值",
+        "required": true,
+        "types": [
+          "number"
+        ],
+        "description": "映射颜色/大小的数值"
+      }
+    ],
+    "optional": [],
+    "strategy": "作为样式/编码能力。"
+  },
+  "geo": {
+    "name_zh": "地理坐标组件",
+    "kind": "component",
+    "imd_priority": "advanced",
+    "min_fields": "2",
+    "data_shape": "geo_coordinate",
+    "required": [
+      {
+        "id": "longitude",
+        "label": "经度",
+        "required": true,
+        "types": [
+          "number"
+        ],
+        "description": "经度"
+      },
+      {
+        "id": "latitude",
+        "label": "纬度",
+        "required": true,
+        "types": [
+          "number"
+        ],
+        "description": "纬度"
+      }
+    ],
+    "optional": [
+      {
+        "id": "name",
+        "label": "地点名称",
+        "required": false,
+        "types": [
+          "text"
+        ],
+        "description": "地点名"
+      },
+      {
+        "id": "value",
+        "label": "数值",
+        "required": false,
+        "types": [
+          "number"
+        ],
+        "description": "数值"
+      }
+    ],
+    "strategy": "通常配合 scatter/effectScatter/lines/map。"
+  },
+  "animation": {
+    "name_zh": "动画示例",
+    "kind": "component",
+    "imd_priority": "internal",
+    "min_fields": "0",
+    "data_shape": "animation_demo",
+    "required": [],
+    "optional": [],
+    "strategy": "作为动画配置，不作为独立模板类型。"
+  },
+  "animtion": {
+    "name_zh": "动画示例(官方拼写)",
+    "kind": "component",
+    "imd_priority": "internal",
+    "min_fields": "0",
+    "data_shape": "animation_demo",
+    "required": [],
+    "optional": [],
+    "strategy": "官方分类拼写保留。"
+  }
+}

@@ -1,0 +1,6 @@
+region_id,region_name,province,zone_type,gdp_index
+R01,East Delta,Shanghai,core,112.4
+R02,North Hub,Beijing,core,108.7
+R03,South Bay,Guangdong,growth,118.9
+R04,West Inland,Sichuan,growth,96.2
+R05,Central Plains,Hubei,stable,91.5
