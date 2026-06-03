@@ -1,16 +1,20 @@
 {
+  "layoutVersion": 2,
   "projects": [
     {
       "id": "project-1778897240992-su4w0p",
-      "name": "merge-relations-cleaning-lab"
+      "name": "merge-relations-cleaning-lab",
+      "folderName": "merge-relations-cleaning-lab"
     },
     {
       "id": "project-1779861144876-2lowlf",
-      "name": "echarts_examples_by_category"
+      "name": "echarts_examples_by_category",
+      "folderName": "echarts_examples_by_category"
     },
     {
       "id": "project-1780416063704-nf51qg",
-      "name": "运营日报测试"
+      "name": "运营日报测试",
+      "folderName": "运营日报测试"
     }
   ]
 }
