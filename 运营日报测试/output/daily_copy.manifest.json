@@ -1,0 +1,12 @@
+{
+  "kind": "imd.table.create_from_view.v1",
+  "sourceTableId": "table-1780922859507-2soe89",
+  "sourceTableName": "daily",
+  "sourceRelativePath": "daily.csv",
+  "outputRelativePath": "output/daily_copy.csv",
+  "manifestPath": "output/daily_copy.manifest.json",
+  "filters": [],
+  "rowCount": 29,
+  "createdAt": "2026-06-08T12:51:27.883Z",
+  "version": 1
+}
