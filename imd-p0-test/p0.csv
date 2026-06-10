@@ -1,9 +1,9 @@
 Date,Channel Name,Campaign,Visitors,Signup Count,Active Users,Orders,GMV,Ad Cost,Conv %,Retention %,Owner,Status,Region,Note,Order Key
-2026/06/01, Paid Search ,Summer-A,1200,86,760,34,"$5,320.50",1800,2.83%,41%,Alice,active,North," first day ",A-001
-06/02/2026,paid search,Summer-A,1250,,780,36,"$5,610",1850,2.88%,42%,Alice,active,North,"missing signups",A-002
-2026-06-03,Social,Summer B,980,54,620,25,4200.75,1500,2.55%,39%,Bob,active,East," ",A-003
-2026-06-04,Email,Summer B,600,41,410,18,3100,240,3.00%,36%,Cara,paused,East,"check refund",A-004
-2026-06-05,Affiliate,Summer C,,28,300,12,1999.9,450,2.40%,35%,Dan,active,South,"missing visitors",A-005
-2026-06-05,Affiliate,Summer C,,28,300,12,1999.9,450,2.40%,35%,Dan,active,South,"duplicate row",A-005
-2026-06-06,Direct,Brand,720,39,510,,2800,0,,38%,Eve,active,West,"missing orders and rate",A-006
-2026-06-07,Social,Brand,850,47,560,22,invalid,900,2.59%,,Bob,active,West,"invalid GMV",A-007
+2026-06-01,Paid Search,Summer-A,1200,86,760,34,5320.5,1800,0.028300000000000002,0.41,Alice,active,North,first day,A-001
+,paid search,Summer-A,1250,,780,36,5610,1850,0.0288,0.42,Alice,active,North,missing signups,A-002
+2026-06-03,Social,Summer B,980,54,620,25,4200.75,1500,0.0255,0.39,Bob,active,East,,A-003
+2026-06-04,Email,Summer B,600,41,410,18,3100,240,0.03,0.36,Cara,paused,East,check refund,A-004
+2026-06-05,Affiliate,Summer C,,28,300,12,1999.9,450,0.024,0.35,Dan,active,South,missing visitors,A-005
+2026-06-05,Affiliate,Summer C,,28,300,12,1999.9,450,0.024,0.35,Dan,active,South,duplicate row,A-005
+2026-06-06,Direct,Brand,720,39,510,,2800,0,,0.38,Eve,active,West,missing orders and rate,A-006
+2026-06-07,Social,Brand,850,47,560,22,,900,0.0259,,Bob,active,West,invalid GMV,A-007
