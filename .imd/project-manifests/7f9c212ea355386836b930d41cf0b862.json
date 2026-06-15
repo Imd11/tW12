@@ -8,17 +8,17 @@
     {
       "name": "p0.csv",
       "relativePath": "p0.csv",
-      "size": 931,
-      "updatedAt": "2026-06-15T14:25:41.328Z",
+      "size": 937,
+      "updatedAt": "2026-06-15T14:30:38.345Z",
       "kind": "data",
-      "sourceHash": "945d5a5e2423b7d94c0d136d987ed5d2e0ed35c17aceab6f0b68c48322ce0dec",
-      "baseHash": "945d5a5e2423b7d94c0d136d987ed5d2e0ed35c17aceab6f0b68c48322ce0dec"
+      "sourceHash": "8b2e1866146934331d6f0bbdfd76cf9e93030a98d8082e18faddd4dac1e72c54",
+      "baseHash": "8b2e1866146934331d6f0bbdfd76cf9e93030a98d8082e18faddd4dac1e72c54"
     },
     {
       "name": "test-record.md",
       "relativePath": "test-record.md",
       "size": 4451,
-      "updatedAt": "2026-06-15T14:25:41.329Z",
+      "updatedAt": "2026-06-15T14:30:38.345Z",
       "kind": "document",
       "sourceHash": "fa782ded5de1f9af20dccc485e8fb3f4a77407f3d13acb2f52be6ef272bd8e1f",
       "baseHash": "fa782ded5de1f9af20dccc485e8fb3f4a77407f3d13acb2f52be6ef272bd8e1f"
