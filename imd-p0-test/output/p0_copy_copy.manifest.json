@@ -1,0 +1,12 @@
+{
+  "kind": "imd.table.create_from_view.v1",
+  "sourceTableId": "table-1781936638055-tayhx3",
+  "sourceTableName": "p0_copy",
+  "sourceRelativePath": "output/p0_copy.csv",
+  "outputRelativePath": "output/p0_copy_copy.csv",
+  "manifestPath": "output/p0_copy_copy.manifest.json",
+  "filters": [],
+  "rowCount": 8,
+  "createdAt": "2026-06-20T06:24:02.766Z",
+  "version": 1
+}
