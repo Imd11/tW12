@@ -1,0 +1,12 @@
+{
+  "kind": "imd.table.create_from_view.v1",
+  "sourceTableId": "table-1781936503654-wobs3f",
+  "sourceTableName": "p0",
+  "sourceRelativePath": "p0.csv",
+  "outputRelativePath": "output/p0_copy_3.csv",
+  "manifestPath": "output/p0_copy_3.manifest.json",
+  "filters": [],
+  "rowCount": 8,
+  "createdAt": "2026-06-20T06:42:16.996Z",
+  "version": 1
+}
