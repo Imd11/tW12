@@ -1,4 +1,4 @@
-date,channel_name_test,campaign_code,Visitors,signup_count_test,active_users,orders,GMV,Ad Cost,Conv,Retention,owner,Status,Region,Note,Order Key
+date,channel_name_test,campaign_code,visits,signups,active_users,orders,revenue,cost,conversion_rate,retention_rate,owner,Status,Region,Note,Order Key
 2026-06-01,Paid Search,Summer-A,1200,86,760,34,5320.5,1800,0.028300000000000002,0.41,Alice,active,North,first day,A-001
 ,paid search,Summer-A,1250,,780,36,5610,1850,0.0288,0.42,Alice,active,North,missing signups,A-002
 2026-06-03,Social,Summer B,,54,620,25,4200.75,1500,0.0255,0.39,Bob,active,East,,A-003
