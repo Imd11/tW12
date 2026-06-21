@@ -4,6 +4,6 @@ date,channel_name_test,campaign_code,Visitors,signup_count_test,active_users,ord
 2026-06-03,Social,Summer B,,54,620,25,4200.75,1500,0.0255,0.39,Bob,active,East,,A-003
 2026-06-04,Email,Summer B,600,41,410,18,3100,240,0.03,0.36,Cara,paused,East,check refund,A-004
 2026-06-05,Affiliate,Summer C,980,,300,12,1999.9,450,0.024,0.35,Dan,active,South,missing visitors,A-005
-2026-06-05,Affiliate,Summer C,980,28,300,12,1999.9,450,0.024,0.35,Dan,active,South,duplicate row,A-005
+2026-06-05,Affiliate,Summer C,,28,300,12,1999.9,450,0.024,0.35,Dan,active,South,duplicate row,A-005
 2026-06-06,Direct,Brand,720,39,510,,2800,0,,0.38,Eve,active,West,missing orders and rate,A-006
 2026-06-07,Social,Brand,850,47,560,22,,900,0.0259,,Bob,active,West,invalid GMV,A-007
