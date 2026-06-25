@@ -9,7 +9,7 @@
       "name": "p0.csv",
       "relativePath": "p0.csv",
       "size": 918,
-      "updatedAt": "2026-06-25T01:03:28.566Z",
+      "updatedAt": "2026-06-25T01:08:28.485Z",
       "kind": "data",
       "sourceHash": "171270cb96ab48f8eeca0b4bc1bea0059b7ac073307c42f80a68a4ea5a069b73",
       "baseHash": "171270cb96ab48f8eeca0b4bc1bea0059b7ac073307c42f80a68a4ea5a069b73"
@@ -18,7 +18,7 @@
       "name": "test-record.md",
       "relativePath": "test-record.md",
       "size": 4451,
-      "updatedAt": "2026-06-25T01:03:28.566Z",
+      "updatedAt": "2026-06-25T01:08:28.486Z",
       "kind": "document",
       "sourceHash": "fa782ded5de1f9af20dccc485e8fb3f4a77407f3d13acb2f52be6ef272bd8e1f",
       "baseHash": "fa782ded5de1f9af20dccc485e8fb3f4a77407f3d13acb2f52be6ef272bd8e1f"
@@ -27,7 +27,7 @@
       "name": "p0_copy.manifest.json",
       "relativePath": "output/p0_copy.manifest.json",
       "size": 345,
-      "updatedAt": "2026-06-25T01:03:28.567Z",
+      "updatedAt": "2026-06-25T01:08:28.486Z",
       "kind": "data",
       "sourceHash": "3d4d5a3ba16032604d78c55f7cd15b9bca4f58b0e7246ccf1418dc2daa0ff77f",
       "baseHash": "3d4d5a3ba16032604d78c55f7cd15b9bca4f58b0e7246ccf1418dc2daa0ff77f"
@@ -36,7 +36,7 @@
       "name": "p0_copy_2.manifest.json",
       "relativePath": "output/p0_copy_2.manifest.json",
       "size": 349,
-      "updatedAt": "2026-06-25T01:03:28.567Z",
+      "updatedAt": "2026-06-25T01:08:28.487Z",
       "kind": "data",
       "sourceHash": "c3d38b9dcd51bd2955e914b76adfc2aca3f8feab7a884cdd52bf516db639e7d3",
       "baseHash": "c3d38b9dcd51bd2955e914b76adfc2aca3f8feab7a884cdd52bf516db639e7d3"
@@ -45,7 +45,7 @@
       "name": "p0_copy_3.manifest.json",
       "relativePath": "output/p0_copy_3.manifest.json",
       "size": 349,
-      "updatedAt": "2026-06-25T01:03:28.567Z",
+      "updatedAt": "2026-06-25T01:08:28.487Z",
       "kind": "data",
       "sourceHash": "1888fc290dded83d15f89b33e04ddf6c332e6a765a719507228b673673fc3989",
       "baseHash": "1888fc290dded83d15f89b33e04ddf6c332e6a765a719507228b673673fc3989"
@@ -54,7 +54,7 @@
       "name": "p0_copy_4.manifest.json",
       "relativePath": "output/p0_copy_4.manifest.json",
       "size": 349,
-      "updatedAt": "2026-06-25T01:03:28.568Z",
+      "updatedAt": "2026-06-25T01:08:28.487Z",
       "kind": "data",
       "sourceHash": "f52fc10aaf32d26d1be7f9d6ef5120039232ce303503961532c8d8abbae4873d",
       "baseHash": "f52fc10aaf32d26d1be7f9d6ef5120039232ce303503961532c8d8abbae4873d"
@@ -63,7 +63,7 @@
       "name": "p0_copy_copy.manifest.json",
       "relativePath": "output/p0_copy_copy.manifest.json",
       "size": 372,
-      "updatedAt": "2026-06-25T01:03:28.568Z",
+      "updatedAt": "2026-06-25T01:08:28.488Z",
       "kind": "data",
       "sourceHash": "21ddb410bcdca7f8c496bc8764196272510f29e6572c4e4e499581d67568476e",
       "baseHash": "21ddb410bcdca7f8c496bc8764196272510f29e6572c4e4e499581d67568476e"
